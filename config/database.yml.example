@@ -1,13 +1,20 @@
-development:
+default: &default
   adapter: postgresql
   encoding: unicode
   database: vr_development
-  username: your_username
+  username: root
+  password: root
   host: localhost
 
+development:
+  <<: *default
+  
 test:
-  adapter: postgresql
-  encoding: unicode
+  <<: *default
   database: vr_test
-  username: your_username
-  host: localhost
+
+production:
+  <<: *default
+staging:
+  <<: *default
+  database: vr_staging

@@ -81,3 +81,4 @@ public/feeds
 yarn-debug.log*
 .yarn-integrity
 /public/assets/
+config/application.yml
